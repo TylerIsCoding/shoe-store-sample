@@ -1,0 +1,1302 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: '.';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+body {
+    overflow-x: hidden;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+hr {
+    text-align: center;
+    width: 30%;
+    height: 2px;
+    background-color: black;
+    border: 0px;
+    align-self: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.fade-in-slide {
+    animation: fade-in 2s;
+}
+
+.fade-out-slide {
+    animation: fade-out 0.5s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Header Section */
+
+header {
+    position: fixed;
+    top: 0;
+    background: white;
+    z-index: 10;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 100px;
+}
+
+header > nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+}
+
+header > nav > .nav-side {
+    width: 50%;
+}
+
+header > nav > .nav-side > ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header > nav > .nav-side > ul > li {
+    padding: 0 40px;
+}
+
+header > nav > img {
+    width: 180px;
+    padding: 5px;
+    position: absolute;
+}
+
+header > nav > .nav-side > ul > li > a {
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+    color: black;
+    font-size: 24px;
+}
+
+header > nav > .nav-side > ul > li > a:hover {
+    color: red;
+    transition: ease-in-out 0.2s;
+}
+
+/* Hero Section */
+
+.hero {
+    height: 100vh;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.style1 {
+    background-image: radial-gradient(
+            at top center,
+            rgba(255, 255, 255, 0.03) 0%,
+            rgba(0, 0, 0, 0.03) 100%
+        ),
+        linear-gradient(
+            to top,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(143, 152, 157, 0.6) 100%
+        );
+    background-blend-mode: normal, multiply;
+}
+
+.style2 {
+    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+}
+
+.style3 {
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+.style4 {
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+
+.style5 {
+    background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+}
+
+.bottom .hero-slides {
+    font-family: 'Roboto Slab', serif;
+}
+
+.bottom .hero-slides .slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bottom .hero-slides li {
+    list-style-type: none;
+}
+
+.hero-left,
+.hero-right {
+    width: 38%;
+    padding: 10px;
+}
+
+.shoe-title-logo {
+    width: 100%;
+    text-align: center;
+}
+
+.shoe-title-logo h2 {
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+
+.shoe-title-logo img {
+    width: 20%;
+}
+
+.shoe-description {
+    text-align: left;
+}
+
+.aj4 .shoe-description,
+.yb350 .shoe-description,
+.af1 .shoe-description {
+    text-align: right;
+}
+
+.aj4 .shoe-description p,
+.yb350 .shoe-description p,
+.af1 .shoe-description p {
+    width: 100%;
+}
+
+.shoe-description p {
+    padding-top: 10px;
+    font-size: 22px;
+    padding-bottom: 40px;
+    padding-top: 30px;
+    width: 90%;
+}
+
+.shop-now-btn {
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+    border: 5px solid black;
+    padding: 10px;
+}
+
+.shop-now-btn:hover {
+    color: red;
+    border: 5px solid red;
+    transition: ease-in-out 0.2s;
+}
+
+#shoeImage {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Nav Arrows */
+
+.arrows {
+    position: absolute;
+}
+
+.arrow-right,
+.arrow-left {
+    z-index: 5;
+    transition: all 0.2s;
+}
+
+.arrows .arrow-right {
+    position: absolute;
+    right: -48vw;
+}
+
+.arrows .arrow-left {
+    position: absolute;
+    left: -48vw;
+    transform: rotateY(180deg);
+}
+
+.arrows .arrow-right:hover {
+    transform: scale(1.5);
+}
+
+.arrows .arrow-left:hover {
+    transform: scale(1.5) rotateY(180deg);
+}
+
+/* Store Description Section */
+
+.store-description {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.store-description .store-logo {
+    display: flex;
+    align-items: center;
+}
+
+.store-description .store-logo img {
+    width: 50px;
+}
+
+.store-description .store-logo .ss-logo {
+    width: 400px;
+}
+
+.store-description p {
+    text-align: center;
+    width: 60%;
+    font-size: 24px;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Categories Section */
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-item {
+    width: 20%;
+    max-width: 20%;
+    height: 550px;
+    padding: 10px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    padding-top: 400px;
+    border-radius: 5px;
+    border: 1px solid #bbbbbb;
+    transition: ease-in-out 0.2s;
+}
+
+.category-item:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.category-item .text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.category-item .text-box p,
+.category-item .text-box h2 {
+    font-family: 'Roboto Slab', serif;
+    color: #e4e4e4;
+    padding: 0 5px;
+}
+
+.text-box {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+}
+
+.text-box h2 {
+    font-size: 36px;
+    padding-bottom: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.text-box p {
+    padding-bottom: 5px;
+    border-radius: 0 0 5px 5px;
+}
+
+.sneakers {
+    background: url('../images/cat-sneakers.jpg') 0 0 no-repeat;
+}
+
+.watches {
+    background: url('../images/cat-watches.jpg') 0 0 no-repeat;
+}
+
+.shirts {
+    background: url('../images/cat-tshirts.jpg') 0 0 no-repeat;
+}
+
+.hoodies {
+    background: url('../images/cat-hoodies.jpg') 0 0 no-repeat;
+}
+
+.sneakers,
+.watches,
+.shirts,
+.hoodies {
+    width: 100%;
+    height: auto;
+    min-width: 350px;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Social Section */
+
+.social {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.social a {
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.social-icon {
+    width: 80px;
+    height: 80px;
+    border: 3px solid black;
+    border-radius: 30%;
+    padding: 20px;
+}
+
+.social-icon:hover {
+    fill: red;
+    border: 3px solid red;
+    transition: ease-in-out 0.2s;
+}
+
+/* Contact Section */
+
+.contact {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+}
+
+.contact-left,
+.contact-right {
+    width: 50%;
+    padding: 50px;
+}
+
+.contact-right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.links .column {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+}
+
+.links .column li {
+    list-style: none;
+    padding: 20px 0;
+}
+
+.links .column li a {
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+}
+
+.links .column li a:hover {
+    color: red;
+    transition: ease-in-out 0.2s;
+}
+
+.input-container {
+    border: 3px solid black;
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container h2 {
+    font-size: 32px;
+    font-family: 'Roboto Slab', serif;
+    padding-bottom: 20px;
+}
+
+.input-container .input input {
+    width: 50%;
+    padding: 20px;
+    font-family: 'Roboto Slab', serif;
+    border: 2px solid #bbbbbb;
+    font-size: 16px;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.input-container .input button {
+    border: 2px solid black;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.input-container .input button:hover {
+    cursor: pointer;
+    color: red;
+    border-color: red;
+    transition: ease-in-out 0.2s;
+}
+
+/* Footer Section */
+
+footer {
+    width: 100%;
+    background: black;
+    color: white;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.footer ul {
+    padding: 20px;
+}
+
+.footer li {
+    list-style-type: none;
+    text-align: center;
+}
+
+.footer li a {
+    text-decoration: none;
+    color: red;
+}
+
+.footer li a:hover {
+    color: white;
+    transition: ease-in-out 0.2s;
+}
+
+/* Sneakers Page */
+
+.sneakers-hero {
+    height: 100vh;
+    width: 100%;
+    background-color: #ffa300;
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+    box-shadow: 5px 0px 5px black;
+}
+
+.sneaker-text {
+    width: 40%;
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    box-shadow: 5px 0px 5px black;
+    background: #e68300;
+    text-align: center;
+    padding: 20px;
+    min-height: 650px;
+}
+
+.sneaker-text h1 {
+    font-size: 56px;
+    margin-bottom: 40px;
+    text-decoration: underline;
+    font-family: 'Shrikhand', cursive;
+    text-align: center;
+    background: #ffa300;
+    padding: 15px;
+    box-shadow: 2px 2px 5px black inset, -2px -2px 5px inset black;
+}
+
+.sneaker-text h2 {
+    font-size: 42px;
+    margin-bottom: 30px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.sneaker-text h2 img {
+    width: 25%;
+}
+
+.sneaker-text h2 span {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+    font-size: 28px;
+}
+
+.sneaker-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.sneaker-text h3 {
+    font-size: 36px;
+    margin-top: 30px;
+}
+
+.sneaker-text button {
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+    padding: 10px;
+    background: white;
+    border: 5px solid black;
+}
+
+.sneaker-text button:hover {
+    cursor: pointer;
+    border: 5px solid black;
+    background: #ffa300;
+    transition: all 0.2s;
+}
+
+.sneaker-image {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+#hero-1 {
+    background-image: url('../images/taxi-yellow.jpg');
+}
+
+#hero-2 {
+    background-image: url('../images/taxi-yellow-alt-1.jpg');
+}
+
+#hero-3 {
+    background-image: url('../images/taxi-yellow-alt-2.jpg');
+}
+
+#hero-4 {
+    background-image: url('../images/taxi-yellow-alt-3.jpg');
+}
+
+.sneaker-hero-image {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s;
+}
+
+.invisible {
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.sneakers-items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.store-header {
+    text-align: center;
+    width: 100%;
+}
+
+.store-header h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 64px;
+    padding: 20px;
+}
+
+.brand {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.brand img {
+    max-width: 300px;
+    padding: 10px 40px;
+}
+
+.sneaker-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.shop-item {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    width: 15%;
+    min-width: 270px;
+    margin: 20px;
+}
+
+.nike-item {
+    background-color: #f6f6f6;
+}
+
+.adidas-item {
+    background-color: #eceff1;
+}
+
+.dc-item {
+    background-color: #ffffff;
+}
+
+.shop-item h3 {
+    font-size: 20px;
+    font-family: 'Roboto Slab', serif;
+    padding: 5px;
+}
+
+.shop-item p {
+    font-size: 16px;
+    font-family: 'Roboto Slab', serif;
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+.shop-item p span {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.shop-item a {
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Roboto Slab', serif;
+    background-color: white;
+}
+
+.shop-item a:hover {
+    color: white;
+    background-color: red;
+    transition: all 0.2s;
+}
+
+.shop-item .sold-out {
+    cursor: not-allowed;
+    background-color: gray;
+}
+
+.shop-item .sold-out:hover {
+    background-color: gray;
+}
+
+.shop-item img {
+    width: 100%;
+}
+
+/* Watches Page */
+
+.watch-hero {
+    height: 100vh;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.watch-bg-image {
+    background: url('../images/forest-splash.jpg') 0 20% no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    filter: brightness(0.5);
+    filter: blur(2px);
+}
+
+.watch-hero-left,
+.watch-hero-right {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
+.watch-hero-right {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#watch-hero-image {
+    border: 6px solid black;
+    background-image: url('../images/watch-hero.jpg');
+    background-position: center;
+    background-size: cover;
+    min-width: 50vmin;
+    height: 75vmin;
+    display: flex;
+    transition: background 0.8s linear;
+}
+
+.watch-hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+}
+
+.watch-hero-left h1 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 64px;
+    font-weight: 300;
+    text-decoration: underline;
+    padding: 20px;
+    color: white;
+    background: black;
+}
+
+.watch-hero-left h2 {
+    font-size: 48px;
+    padding: 20px;
+    background: black;
+    color: white;
+}
+
+.watch-hero-left p {
+    font-size: 28px;
+    padding: 20px;
+    background: black;
+    color: white;
+}
+
+.watch-items {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.watch-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.watch-pic {
+    transition: all 0.3s;
+}
+
+.watch-pic:hover {
+    transform: scale(1.1);
+}
+
+/* T-Shirt Page */
+
+.shirt-hero {
+    width: 100vw;
+    height: 100vh;
+}
+
+.shirt-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.shirt-hero-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/shirt-hero-1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background 0.8s;
+    filter: blur(2px);
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1580px) {
+    .category-item {
+        max-width: 35%;
+    }
+    .links .column li a {
+        font-size: 22px;
+    }
+    .shop-item {
+        min-width: 240px;
+    }
+    .sneaker-text {
+        width: 60%;
+    }
+    .watch-hero-left h1 {
+        font-size: 56px;
+        margin: 5px;
+    }
+    .watch-hero-left h2 {
+        font-size: 36px;
+        margin: 5px;
+    }
+    .watch-hero-left p {
+        font-size: 24px;
+        margin: 5px;
+    }
+    .rolex-item,
+    .omega-item {
+        min-width: 280px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    header > nav > .nav-side > ul > li > a {
+        font-size: 20px;
+    }
+
+    header > nav > .nav-right > ul {
+        margin-left: 30px;
+    }
+
+    header > nav > .nav-side > ul > li {
+        padding: 0 20px;
+    }
+
+    .shoe-title-logo h2 {
+        font-size: 38px;
+    }
+
+    .shoe-description p {
+        font-size: 20px;
+    }
+
+    .arrow-right,
+    .arrow-left {
+        height: 70px;
+    }
+
+    .store-description p {
+        width: 75%;
+    }
+
+    .links .column li a {
+        font-size: 18px;
+    }
+
+    .contact-left,
+    .contact-right {
+        padding: 20px;
+    }
+
+    .input-container {
+        justify-content: center;
+        padding: 30px;
+    }
+
+    .input-container h2 {
+        text-align: center;
+    }
+
+    .input-container .input {
+        justify-content: center;
+    }
+
+    .input-container .input input {
+        width: unset;
+    }
+
+    .input-container .input button {
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    .sneakers-hero .sneaker-text h1 {
+        font-size: 38px;
+        text-align: center;
+    }
+
+    .sneakers-hero .sneaker-text h2 {
+        font-size: 32px;
+    }
+
+    .sneakers-hero .sneaker-text p {
+        font-size: 14px;
+    }
+
+    .sneakers-hero .sneaker-text button {
+        font-size: 20px;
+    }
+
+    .sneakers-hero .sneaker-text h3 {
+        font-size: 30px;
+    }
+    .shop-item {
+        min-width: 330px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    header > nav > .nav-side > ul > li > a {
+        font-size: 15px;
+        font-weight: 900;
+    }
+
+    header > nav > .nav-right > ul {
+        margin-left: 40px;
+    }
+
+    header > nav > .nav-left > ul {
+        margin-left: -40px;
+    }
+
+    header > nav > .nav-side > ul > li {
+        padding: 0 15px;
+    }
+
+    .bottom .hero-slides .slide {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bottom .hero-slides .aj3.slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 90%;
+        height: 42vh;
+        padding: 20px;
+    }
+
+    .aj3 .shoe-description,
+    .aj4 .shoe-description,
+    .yb350 .shoe-description,
+    .af1 .shoe-description {
+        text-align: center;
+    }
+
+    .shoe-description p {
+        width: 100%;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .arrow-right,
+    .arrow-left {
+        height: 50px;
+    }
+
+    .shop-now-btn {
+        font-size: 20px;
+    }
+
+    .store-description p {
+        font-size: 18px;
+    }
+
+    hr {
+        width: 15%;
+    }
+
+    .contact-left,
+    .contact-right {
+        padding: 10px;
+    }
+
+    .links .column li a {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .input-container h2 {
+        font-size: 26px;
+        padding-bottom: 20px;
+    }
+
+    .input-container .input input {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .sneakers-hero {
+        width: 100%;
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin-top: 100px;
+        padding: 20px;
+        height: unset;
+        box-shadow: 5px 5px 5px black;
+    }
+
+    .sneaker-image {
+        height: 85vmin;
+    }
+
+    .sneakers-hero .sneaker-text {
+        width: 100%;
+        align-items: center;
+        padding: 20px;
+        box-shadow: 5px 5px 5px black;
+    }
+
+    .sneaker-text h2 img {
+        width: 15%;
+    }
+
+    .sneakers-hero .sneaker-text h1 {
+        font-size: 32px;
+        padding: 15px;
+    }
+
+    .sneakers-hero .sneaker-text h2 {
+        font-size: 28px;
+        padding: 15px;
+    }
+
+    .sneakers-hero .sneaker-text h3 {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .watch-hero {
+        flex-direction: column-reverse;
+        height: 100%;
+    }
+    .watch-hero-left h1 {
+        font-size: 28px;
+    }
+    .watch-hero-left h2 {
+        font-size: 20px;
+    }
+    .watch-hero-left p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    header > nav > .nav-side > ul > li > a {
+        display: none;
+    }
+
+    .store-description .store-logo .ss-logo {
+        width: 300px;
+    }
+
+    .store-description .store-logo img {
+        width: 30px;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .input-container .input input {
+        width: 65%;
+    }
+
+    .links .column li a {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .store-header h2 {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .shoe-description p {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .social a {
+        padding: 10px 5px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    header > nav > img {
+        width: 150px;
+    }
+    .shoe-title-logo h2 {
+        font-size: 32px;
+    }
+    .store-description .store-logo .ss-logo {
+        width: 250px;
+    }
+    .store-description p {
+        font-size: 16px;
+    }
+
+    .sneakers,
+    .watches,
+    .shirts,
+    .hoodies {
+        width: 100%;
+        height: auto;
+        min-width: 300px;
+        min-height: 530px;
+    }
+
+    .social-icon {
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+    }
+    .sneaker-header h2 {
+        font-size: 36px;
+    }
+    .shop-item {
+        min-width: 275px;
+    }
+    .watch-hero-left h1 {
+        font-size: 18px;
+        padding: 10px;
+    }
+    .watch-hero-left h2 {
+        font-size: 14px;
+        padding: 5px;
+    }
+    .watch-hero-left p {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
