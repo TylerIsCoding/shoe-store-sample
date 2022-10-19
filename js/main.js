@@ -25,19 +25,19 @@ shirtsButton.addEventListener('click', redirectShirts);
 jacketsButton.addEventListener('click', redirectJackets);
 
 function redirectSneakers() {
-    window.location.href = '/sneakers.html';
+    window.location.href = 'sneakers.html';
 }
 
 function redirectWatches() {
-    window.location.href = '/watches.html';
+    window.location.href = 'watches.html';
 }
 
 function redirectShirts() {
-    window.location.href = '/shirts.html';
+    window.location.href = 'shirts.html';
 }
 
 function redirectJackets() {
-    window.location.href = '/jackets.html';
+    window.location.href = 'jackets.html';
 }
 
 function heroRight() {
