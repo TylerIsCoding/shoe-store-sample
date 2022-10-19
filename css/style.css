@@ -807,23 +807,14 @@ footer {
 /* Watches Page */
 
 .watch-hero {
+    width: 100%;
     height: 100vh;
     padding-top: 100px;
     display: flex;
     flex-direction: row;
-}
-
-.watch-bg-image {
     background: url('../images/forest-splash.jpg') 0 20% no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
     z-index: -1;
-    top: 0;
-    left: 0;
-    filter: brightness(0.5);
-    filter: blur(2px);
 }
 
 .watch-hero-left,
@@ -831,6 +822,7 @@ footer {
     height: 100%;
     width: 100%;
     padding: 20px;
+    z-index: 1;
 }
 
 .watch-hero-right {
