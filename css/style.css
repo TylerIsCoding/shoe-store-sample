@@ -282,6 +282,7 @@ header > nav > .nav-side > ul {
     display: unset;
     font-size: 30px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .hamburger-nav-item .nav-link:hover {
