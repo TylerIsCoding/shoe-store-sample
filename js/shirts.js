@@ -1,4 +1,5 @@
 const shirtHeroImage = document.querySelector('.shirt-hero-image');
+const shirtImage = document.querySelectorAll('.shirt-pic');
 const storeLogo = document.querySelector('#company-logo');
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.hamburger-nav-menu');
@@ -36,3 +37,14 @@ document.querySelectorAll('.hamburger-nav-link').forEach(n =>
         navMenu.classList.remove('active');
     })
 );
+
+shirtImage.forEach(image => {
+    image.addEventListener('mouseover', function changeAlt() {
+        let source = image.src.slice(0, image.src.length - 4);
+        image.src = source + '-alt' + '.png';
+    });
+    image.addEventListener('mouseout', function changeNorm() {
+        let norm = image.src.slice(0, image.src.length - 8);
+        image.src = norm + '.png';
+    });
+});
