@@ -275,6 +275,7 @@ header > nav > .nav-side > ul {
 
 .hamburger-nav-menu {
     display: none;
+    list-style-type: none;
 }
 
 .hamburger-nav-item .nav-link {
@@ -283,7 +284,6 @@ header > nav > .nav-side > ul {
     font-size: 30px;
     cursor: pointer;
     text-decoration: none;
-    list-style-type: none;
 }
 
 .hamburger-nav-item .nav-link:hover {
@@ -1307,6 +1307,10 @@ footer {
     }
     .store-header h2 {
         font-size: 48px;
+    }
+
+    .sneaker-image {
+        padding: 0;
     }
 }
 
