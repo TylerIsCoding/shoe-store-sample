@@ -970,6 +970,25 @@ footer {
     filter: blur(2px);
 }
 
+/* Contact Page */
+
+.contact-container {
+    padding-top: 100px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-info {
+    padding: 50px;
+    width: 30%;
+}
+
+.contact-map {
+    padding: 50px;
+    width: 70%;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 1580px) {
