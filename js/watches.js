@@ -2,7 +2,10 @@ const watchHeroImage = document.querySelector('#watch-hero-image');
 const storeLogo = document.querySelector('#company-logo');
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.hamburger-nav-menu');
-const imageArray = ['./images/watch-hero.jpg', './images/watch-hero-alt.jpg'];
+const imageArray = [
+    './images/images-hero/watch-hero.jpg',
+    './images/images-hero/watch-hero-alt.jpg',
+];
 let imagePosition = 0;
 
 window.setInterval(changeHero, 3000);

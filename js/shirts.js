@@ -3,10 +3,10 @@ const storeLogo = document.querySelector('#company-logo');
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.hamburger-nav-menu');
 const imageArray = [
-    './images/shirt-hero-1.jpg',
-    './images/shirt-hero-2.jpg',
-    './images/shirt-hero-3.jpg',
-    './images/shirt-hero-4.jpg',
+    './images/images-hero/shirt-hero-1.jpg',
+    './images/images-hero/shirt-hero-2.jpg',
+    './images/images-hero/shirt-hero-3.jpg',
+    './images/images-hero/shirt-hero-4.jpg',
 ];
 let imagePosition = 0;
 
