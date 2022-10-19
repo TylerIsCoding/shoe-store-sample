@@ -577,7 +577,7 @@ footer {
 .sneakers-hero {
     height: 100vh;
     width: 100%;
-    background-color: #ffa300;
+    background-color: #ffa400;
     display: flex;
     flex-direction: row;
     padding-top: 100px;
@@ -922,8 +922,8 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.3);
 }
 
