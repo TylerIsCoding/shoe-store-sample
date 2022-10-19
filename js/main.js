@@ -5,6 +5,9 @@ const aj3Slide = document.querySelector('.aj3');
 const aj4Slide = document.querySelector('.aj4');
 const af1Slide = document.querySelector('.af1');
 const yb350Slide = document.querySelector('.yb350');
+const storeLogo = document.querySelector('#company-logo');
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.hamburger-nav-menu');
 
 const slideArray = [aj3Slide, af1Slide, yb350Slide, aj4Slide];
 const colorArray = ['style1', 'style2', 'style3', 'style4', 'style5'];
@@ -23,6 +26,22 @@ sneakerButton.addEventListener('click', redirectSneakers);
 watchesButton.addEventListener('click', redirectWatches);
 shirtsButton.addEventListener('click', redirectShirts);
 jacketsButton.addEventListener('click', redirectJackets);
+storeLogo.addEventListener('click', redirectHome);
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+document.querySelectorAll('.hamburger-nav-link').forEach(n =>
+    n.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    })
+);
+
+function redirectHome() {
+    window.location.href = 'index.html';
+}
 
 function redirectSneakers() {
     window.location.href = 'sneakers.html';

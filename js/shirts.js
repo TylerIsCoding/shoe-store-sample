@@ -1,4 +1,7 @@
 const shirtHeroImage = document.querySelector('.shirt-hero-image');
+const storeLogo = document.querySelector('#company-logo');
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.hamburger-nav-menu');
 const imageArray = [
     './images/shirt-hero-1.jpg',
     './images/shirt-hero-2.jpg',
@@ -16,3 +19,20 @@ function changeHero() {
     }
     shirtHeroImage.style.backgroundImage = `url('${imageArray[imagePosition]}')`;
 }
+
+function redirectHome() {
+    window.location.href = 'index.html';
+}
+
+storeLogo.addEventListener('click', redirectHome);
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+document.querySelectorAll('.hamburger-nav-link').forEach(n =>
+    n.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    })
+);

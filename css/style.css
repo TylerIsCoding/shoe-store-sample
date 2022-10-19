@@ -105,24 +105,25 @@ header > nav > .nav-side > ul {
     list-style: none;
 }
 
-header > nav > .nav-side > ul > li {
+.nav-item {
     padding: 0 40px;
 }
 
-header > nav > img {
+#company-logo {
     width: 180px;
     padding: 5px;
     position: absolute;
+    cursor: pointer;
 }
 
-header > nav > .nav-side > ul > li > a {
+.nav-link {
     text-decoration: none;
     font-family: 'Roboto Slab', serif;
     color: black;
     font-size: 24px;
 }
 
-header > nav > .nav-side > ul > li > a:hover {
+.nav-link:hover {
     color: red;
     transition: ease-in-out 0.2s;
 }
@@ -252,6 +253,43 @@ header > nav > .nav-side > ul > li > a:hover {
     width: 100%;
     height: 100%;
     overflow: hidden;
+}
+
+/* Hamburger Bar */
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: black;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    margin-right: 20px;
+}
+
+.hamburger-nav-menu {
+    display: none;
+}
+
+.hamburger-nav-item .nav-link {
+    color: black;
+    display: unset;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.hamburger-nav-item .nav-link:hover {
+    color: red;
+}
+
+.hamburger-nav-item {
+    padding: 0 40px;
 }
 
 /* Nav Arrows */
@@ -964,7 +1002,7 @@ footer {
 }
 
 @media screen and (max-width: 1400px) {
-    header > nav > .nav-side > ul > li > a {
+    .nav-link {
         font-size: 20px;
     }
 
@@ -972,7 +1010,7 @@ footer {
         margin-left: 30px;
     }
 
-    header > nav > .nav-side > ul > li {
+    .nav-item {
         padding: 0 20px;
     }
 
@@ -1050,7 +1088,7 @@ footer {
 }
 
 @media screen and (max-width: 1000px) {
-    header > nav > .nav-side > ul > li > a {
+    .nav-link {
         font-size: 15px;
         font-weight: 900;
     }
@@ -1063,7 +1101,7 @@ footer {
         margin-left: -40px;
     }
 
-    header > nav > .nav-side > ul > li {
+    .nav-item {
         padding: 0 15px;
     }
 
@@ -1194,8 +1232,45 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
-    header > nav > .nav-side > ul > li > a {
+    .nav-link {
         display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hamburger-nav-menu {
+        display: unset;
+        position: fixed;
+        left: -100%;
+        top: 100px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .hamburger-nav-item {
+        margin: 30px 0;
+    }
+
+    .hamburger-nav-menu.active {
+        left: 0;
     }
 
     .store-description .store-logo .ss-logo {
@@ -1245,7 +1320,7 @@ footer {
 }
 
 @media screen and (max-width: 375px) {
-    header > nav > img {
+    #company-logo {
         width: 150px;
     }
     .shoe-title-logo h2 {
