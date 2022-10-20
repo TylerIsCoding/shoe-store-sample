@@ -974,19 +974,84 @@ footer {
 
 .contact-container {
     padding-top: 100px;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Slab', serif;
 }
 
 .contact-info {
     padding: 50px;
     width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.main-info h2,
+.hours-info h2 {
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 5px;
+}
+
+.main-info h3,
+.contact-info h3 {
+    padding: 5px;
 }
 
 .contact-map {
+    width: 40%;
+    height: 600px;
     padding: 50px;
-    width: 70%;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 3px solid black;
+}
+
+.about-us-container {
+    font-family: 'Roboto Slab', serif;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-us-info {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.about-us-info h2 {
+    font-size: 56px;
+}
+
+.about-us-info p {
+    font-size: 24px;
+}
+
+.about-us-info .note-from-dev {
+    font-size: 18px;
+}
+
+.privacy-container {
+    height: 400px;
+}
+
+.privacy-info p {
+    font-size: 16px;
 }
 
 /* Media Queries */
@@ -1105,6 +1170,28 @@ footer {
     }
     .shop-item {
         min-width: 330px;
+    }
+    .contact-info {
+        width: 40%;
+    }
+    .contact-map {
+        width: 60%;
+    }
+    .about-us-container {
+        height: 500px;
+    }
+    .about-us-info {
+        justify-content: space-around;
+    }
+    .about-us-info {
+        width: 100%;
+        padding: 50px;
+    }
+    .about-us-info h2 {
+        font-size: 36px;
+    }
+    .about-us-info p {
+        font-size: 18px;
     }
 }
 
@@ -1250,6 +1337,9 @@ footer {
     .watch-hero-left p {
         font-size: 14px;
     }
+    .about-us-container {
+        height: 600px;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -1332,6 +1422,20 @@ footer {
     .sneaker-image {
         padding: 0;
     }
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-info {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .contact-map {
+        width: 100%;
+    }
+    .about-us-container {
+        height: 800px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -1342,6 +1446,37 @@ footer {
 
     .social a {
         padding: 10px 5px;
+    }
+    .main-info,
+    .hours-info {
+        font-size: 12px;
+    }
+    .about-us-container {
+        height: 930px;
+    }
+
+    .about-us-info {
+        padding: 30px;
+    }
+    .about-us-info p {
+        font-size: 16px;
+    }
+    .contact-map {
+        padding: 20px;
+        height: 330px;
+    }
+    .contact-info {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-info h2,
+    .hours-info h2 {
+        font-size: 20px;
+    }
+    .main-info h3,
+    .hours-info h3 {
+        font-size: 18px;
     }
 }
 
@@ -1391,5 +1526,13 @@ footer {
     .watch-hero-left p {
         font-size: 12px;
         padding: 5px;
+    }
+    .main-info h2,
+    .hours-info h2 {
+        font-size: 16px;
+    }
+    .main-info h3,
+    .hours-info h3 {
+        font-size: 14px;
     }
 }
