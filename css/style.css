@@ -854,6 +854,7 @@ footer {
     flex-direction: row;
     background: url('../images/images-hero/forest-splash.jpg') 0 20% no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     z-index: -1;
 }
 
@@ -878,6 +879,7 @@ footer {
     background-image: url('../images/images-hero/watch-hero.jpg');
     background-position: center;
     background-size: cover;
+
     min-width: 50vmin;
     height: 75vmin;
     display: flex;
@@ -966,6 +968,7 @@ footer {
     height: 100%;
     background-image: url('../images/images-hero/shirt-hero-1.jpg');
     background-position: center;
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     transition: background 0.8s;
@@ -1057,6 +1060,7 @@ footer {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     transition: background 0.8s;
     filter: blur(2px);
 }
