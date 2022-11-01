@@ -947,6 +947,7 @@ footer {
 .shirt-hero {
     width: 100vw;
     height: 100vh;
+    min-height: 650px;
 }
 
 .shirt-hero::after {
@@ -956,6 +957,7 @@ footer {
     left: 0;
     width: 100vw;
     height: 100vh;
+    min-height: 650px;
     background: rgba(0, 0, 0, 0.3);
 }
 
@@ -970,6 +972,82 @@ footer {
     filter: blur(2px);
 }
 
+.shirt-hero-text {
+    position: absolute;
+    padding-top: 100px;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    min-height: 650px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.shirt-hero-left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.shirt-hero-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shirt-hero-left h1,
+.shirt-hero-left h2,
+.shirt-hero-left a {
+    background-color: black;
+    padding: 15px;
+}
+
+.shirt-hero-left h1,
+.shirt-hero-left h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 64px;
+}
+
+.shirt-hero-left h2 {
+    font-size: 36px;
+}
+
+.shirt-hero-right img {
+    width: 50%;
+    height: auto;
+    padding: 50px;
+    z-index: inherit;
+    filter: drop-shadow(10px 10px 10px black);
+}
+
+.shirt-hero-left a {
+    font-size: 54px;
+    font-weight: 700;
+    background: #ee1c25;
+    border: 5px solid black;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    transition: all 0.2s;
+    text-decoration: none;
+    text-shadow: 3px 3px 0 black;
+    color: #fdf001;
+    letter-spacing: 0.12rem;
+}
+
+.shirt-hero-left a:hover {
+    background: #fdf001;
+    color: #ee1c25;
+}
 /* Jacket Page */
 
 .jacket-hero-image {
@@ -1191,9 +1269,15 @@ iframe {
     .shop-item {
         min-width: 330px;
     }
+
+    .shirt-hero-right img {
+        width: 60%;
+    }
+
     .contact-info {
         width: 40%;
     }
+
     .contact-map {
         width: 60%;
     }
@@ -1360,6 +1444,19 @@ iframe {
     .watch-hero-left p {
         font-size: 14px;
     }
+
+    .shirt-hero-left h1 {
+        font-size: 36px;
+    }
+
+    .shirt-hero-left h2 {
+        font-size: 22px;
+    }
+
+    .shirt-hero-right img {
+        width: 100%;
+    }
+
     .privacy-info > p {
         font-size: 12px !important;
     }
@@ -1445,6 +1542,41 @@ iframe {
     .sneaker-image {
         padding: 0;
     }
+
+    .shirt-hero-text {
+        flex-direction: column;
+        height: unset;
+    }
+
+    .shirt-hero-left,
+    .shirt-hero-right {
+        width: 100%;
+        height: 50%;
+    }
+
+    .shirt-hero-left {
+        padding: 20px;
+    }
+
+    .shirt-hero-left a,
+    .shirt-hero-left h1,
+    .shirt-hero-left h2 {
+        margin: 10px;
+    }
+
+    .shirt-hero-left h1 {
+        font-size: 24px;
+    }
+
+    .shirt-hero-left h2 {
+        font-size: 18px;
+    }
+
+    .shirt-hero-right img {
+        width: 100%;
+        max-width: 550px;
+    }
+
     .contact-container {
         flex-direction: column;
     }
@@ -1499,6 +1631,9 @@ iframe {
     }
     .privacy-info > p {
         font-size: 12px !important;
+    }
+    .shirt-hero-right img {
+        max-width: 300px;
     }
 }
 
@@ -1559,5 +1694,14 @@ iframe {
     }
     .privacy-info p {
         font-size: 12px !important;
+    }
+    .shirt-hero-left h1 {
+        font-size: 24px;
+    }
+    .shirt-hero-left h2 {
+        font-size: 18px;
+    }
+    .shirt-hero-right img {
+        max-width: 250px;
     }
 }
