@@ -854,7 +854,6 @@ footer {
     flex-direction: row;
     background: url('../images/images-hero/forest-splash.jpg') 0 20% no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     z-index: -1;
 }
 
@@ -968,9 +967,9 @@ footer {
     height: 100%;
     background-image: url('../images/images-hero/shirt-hero-1.jpg');
     background-position: center;
-    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     transition: background 0.8s;
     filter: blur(2px);
 }
@@ -1019,7 +1018,7 @@ footer {
 .shirt-hero-left h1,
 .shirt-hero-left h2 {
     font-family: 'Roboto Slab', serif;
-    font-size: 64px;
+    font-size: 50px;
 }
 
 .shirt-hero-left h2 {
@@ -1027,7 +1026,7 @@ footer {
 }
 
 .shirt-hero-right img {
-    width: 50%;
+    max-width: 500px;
     height: auto;
     padding: 50px;
     z-index: inherit;
@@ -1060,7 +1059,6 @@ footer {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     transition: background 0.8s;
     filter: blur(2px);
 }
@@ -1274,10 +1272,6 @@ iframe {
         min-width: 330px;
     }
 
-    .shirt-hero-right img {
-        width: 60%;
-    }
-
     .contact-info {
         width: 40%;
     }
@@ -1438,6 +1432,7 @@ iframe {
     .watch-hero {
         flex-direction: column-reverse;
         height: 100%;
+        background-attachment: unset;
     }
     .watch-hero-left h1 {
         font-size: 28px;
@@ -1449,6 +1444,10 @@ iframe {
         font-size: 14px;
     }
 
+    .shirt-hero-image {
+        background-attachment: scroll;
+    }
+
     .shirt-hero-left h1 {
         font-size: 36px;
     }
@@ -1458,7 +1457,7 @@ iframe {
     }
 
     .shirt-hero-right img {
-        width: 100%;
+        max-width: 300px;
     }
 
     .privacy-info > p {
@@ -1549,7 +1548,7 @@ iframe {
 
     .shirt-hero-text {
         flex-direction: column;
-        height: unset;
+        justify-content: space-evenly;
     }
 
     .shirt-hero-left,
@@ -1577,8 +1576,8 @@ iframe {
     }
 
     .shirt-hero-right img {
-        width: 100%;
-        max-width: 430px;
+        padding: 10px;
+        max-width: 200px;
     }
 
     .contact-container {
@@ -1636,8 +1635,9 @@ iframe {
     .privacy-info > p {
         font-size: 12px !important;
     }
-    .shirt-hero-right img {
-        max-width: 300px;
+    .shirt-hero-left,
+    .shirt-hero-right {
+        height: unset;
     }
 }
 
@@ -1706,6 +1706,5 @@ iframe {
         font-size: 18px;
     }
     .shirt-hero-right img {
-        max-width: 250px;
     }
 }
