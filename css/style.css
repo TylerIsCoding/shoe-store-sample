@@ -1059,6 +1059,7 @@ footer {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     transition: background 0.8s;
     filter: blur(2px);
 }
@@ -1442,6 +1443,10 @@ iframe {
     }
     .watch-hero-left p {
         font-size: 14px;
+    }
+
+    .jacket-hero-image {
+        background-attachment: scroll;
     }
 
     .shirt-hero-image {
